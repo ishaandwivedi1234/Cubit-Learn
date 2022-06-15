@@ -20,7 +20,6 @@ class NutritionServiceRepo extends NutritionRepository {
     var hits = jsonResponse['hits'];
     if (hits.isEmpty) throw Exception('No nutrition found');
     var nutritions = hits[0]['fields'];
-
     final nutrition = Nutrition.fromJson(nutritions);
     return nutrition;
   }

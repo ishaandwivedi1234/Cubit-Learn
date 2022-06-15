@@ -11,8 +11,9 @@ class NutritionCubit extends Cubit<NutritionState> {
   NutritionCubit(this._nutritionRepository) : super(NutritionInitial());
 
   void search(String foodName) async {
-    emit(NutritionLoading());
     try {
+      emit(NutritionLoading());
+
       final Nutrition nutrition =
           await _nutritionRepository.getNutrition(foodName);
       // print(nutrition.name.toString() + 'this is cubit');

@@ -16,29 +16,24 @@ class NutritionLoading extends NutritionState {
 
 class NutritionLoaded extends NutritionState {
   final Nutrition nutrition;
-
   const NutritionLoaded({required this.nutrition});
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-
     return other is NutritionLoaded && other.nutrition == nutrition;
   }
-
   @override
   int get hashCode => nutrition.hashCode;
 }
 
 class NutritionError extends NutritionState {
   final String message;
-
   const NutritionError({required this.message});
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-
     return other is NutritionError && other.message == message;
   }
 }
