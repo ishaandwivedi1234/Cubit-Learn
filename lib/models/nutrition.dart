@@ -1,4 +1,6 @@
+
 class Nutrition {
+  
   final String name;
   var calories;
   var totalFat;
